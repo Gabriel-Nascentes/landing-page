@@ -66,7 +66,9 @@ p{
 table{
     border-collapse: collapse;
     min-width: 22.5rem;
+    
 }
+
 table caption{
     font-style: italic;
     font-size: 1.6rem;
@@ -79,17 +81,22 @@ table td, table th{
     text-align: left;
     padding: 0.5rem;
     border: 0.1rem solid var(--light-gray-color);
+    align-content: center;
 }
+
 tfoot tr, table th{
     background: var(--light-gray-color);
+    
     
 }
 #tfoot{
     text-align: right;
+
 }
-.responsive-table table{
+.responsive-table {
     overflow: auto;
     overflow-x: scroll;
+    
 }
 
 .menu{
@@ -346,7 +353,7 @@ body .full-width{
     border: 0.2rem solid var(--primary-color);
 }
 
-@media(min-width:37.5rem) and (max-width: 50rem){
+@media screen and (min-width:37.5rem) and (max-width: 50rem){
     .intro-content, .grid{
         grid-template-columns: 1fr;
     }
@@ -433,7 +440,7 @@ body .full-width{
     }
 
 }
-@media(max-width:37.49rem){
+@media screen and (max-width:37.49rem){
     .intro-content, .grid{
         grid-template-columns: 1fr;
     }
