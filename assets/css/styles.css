@@ -3,7 +3,7 @@
     --secondary-color: #66153C;
     --white-color: #fff;
     --light-gray-color: #eee;
-    --gap: 3rem;
+    --gap: 1.5rem;
 }
 *{
     margin: 0;
@@ -64,9 +64,8 @@ p{
     margin-bottom: 1rem;
 }
 table{
-    width: 100%;
     border-collapse: collapse;
-    min-width: 36rem;
+    min-width: 22.5rem;
 }
 table caption{
     font-style: italic;
@@ -83,14 +82,14 @@ table td, table th{
 }
 tfoot tr, table th{
     background: var(--light-gray-color);
+    
 }
 #tfoot{
     text-align: right;
 }
-.responsive{
-    overflow: hidden;
-    overflow-x: auto;
-
+.responsive-table table{
+    overflow: auto;
+    overflow-x: scroll;
 }
 
 .menu{
@@ -347,7 +346,7 @@ body .full-width{
     border: 0.2rem solid var(--primary-color);
 }
 
-@media(max-width: 50rem){
+@media(min-width:37.5rem) and (max-width: 50rem){
     .intro-content, .grid{
         grid-template-columns: 1fr;
     }
@@ -420,7 +419,6 @@ body .full-width{
     }
     .intro-content{
         top: 0;
-        grid-template-columns: 1fr 1fr;
 
     }
     a{
@@ -429,6 +427,99 @@ body .full-width{
     .menu ul li a{
         font-size: 3rem;
         text-align: center;
+    }
+    .footer a{
+        font-size: 1.5rem;
+    }
+
+}
+@media(max-width:37.49rem){
+    .intro-content, .grid{
+        grid-template-columns: 1fr;
+    }
+
+    .gallery-img{
+        width: 100%;
+        max-width: 100%;
+        max-height: 100%;
+    }
+
+    .gallery-img img{
+        width: 100%;
+        padding-right: auto;
+    }
+
+    .menu{
+        bottom: 0;
+    }
+
+    .menu-content, .menu-content ul{
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    .menu-content{
+        height: 100vh;
+    }
+
+    .menu{
+        display: none;
+    }
+
+    .close-menu{
+        position: fixed;
+        z-index: 2;
+        top: 0;
+        left: 0;
+    }
+
+    .close-menu-label::after{
+        content: '☰';
+        position: fixed;
+        z-index: 2;
+        top: 2rem;
+        right: 2rem;
+        background: var(--primary-color);
+        color: var(--white-color);
+        font-size: 3rem;
+        line-height: 3rem;
+        width: 3rem;
+        height: 3rem;
+        text-align: center;
+        padding: 0.2rem;
+        cursor: pointer;
+    }
+
+    .close-menu:checked~.menu{
+        display: block;
+    }
+
+    .close-menu:checked~.close-menu-label::after{
+        content:'×';
+    }
+
+    .menu-spacing{
+        display: none;
+    }
+    .menu-spacing-contact{
+        display: none;
+    }
+    .intro-content{
+        top: 0;
+
+    }
+    a{
+        font-size: 5rem;
+    }
+    .menu ul li a{
+        font-size: 3rem;
+        text-align: center;
+    }
+    .footer a{
+        font-size: 1.5rem;
+    }
+    .contact-form{
+        grid-column: span 1;
     }
     
 
